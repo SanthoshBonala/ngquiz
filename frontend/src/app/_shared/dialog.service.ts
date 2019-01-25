@@ -31,8 +31,8 @@ export class DialogService {
 
   confirmDelete(data: Question){
     return this.dialog.open(ConfirmDeleteComponent, {
-      width: '25%',
-      height: '33%',
+      width: '27%',
+      height: '37%',
       position: { top: '10%' },
       data
     })

@@ -13,7 +13,7 @@ $input-warn:    mat-palette($mat-red);
 // Create the theme object (a Sass map containing all of the palettes).
 $input-theme: mat-light-theme($input-primary, $input-accent, $input-warn);
 
-$input-card-theme: mat-dark-theme($input-primary, $input-accent, $input-warn);
+$input-card-theme: mat-light-theme($input-primary, $input-accent, $input-warn);
 // @include mat-core-theme($input-card-theme);
 // @include mat-card-theme($input-card-theme);
 
