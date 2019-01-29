@@ -22,8 +22,8 @@ export class DialogService {
 
   showResults(results: any){
     return this.dialog.open(ResultDialogComponent, {
-      width: '25%',
-      height: '33%',
+      width: '40%',
+      height: '40%',
       position: { top: '10%' },
       data: results
     })
@@ -40,8 +40,8 @@ export class DialogService {
 
   saveDataConfirmation(data){
     return this.dialog.open(CustomDialogComponent, {
-      width: '25%',
-      height: '25%',
+      width: '30%',
+      height: '30%',
       position: { top: '18%' },
       data
     })

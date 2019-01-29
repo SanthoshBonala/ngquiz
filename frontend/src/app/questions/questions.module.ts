@@ -6,6 +6,7 @@ import { AddQuestionComponent } from './add-question/add-question.component';
 import { QuestionsRoutingModule } from './questions-routing.module';
 import { QuestionsComponent } from './questions/questions.component';
 import { MaterialModule } from '../material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { MaterialModule } from '../material.module';
     FormsModule,
     ReactiveFormsModule,
     QuestionsRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule
   ],
   declarations: [QuestionsComponent, AddQuestionComponent],
   providers: []

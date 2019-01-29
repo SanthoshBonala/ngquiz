@@ -1,16 +1,13 @@
-<div class="row">
-    <div class="col-sm-12">
-         <p> 
-            {{ data[0] }}
-         </p>
-         <p>
-            {{ data[1] }}
-         </p>
-    </div>
-  
-    <div class="col-sm-6 offset-sm-6">
-        <button mat-flat-button color="warn" id="no-button" [mat-dialog-close]="false">NO</button>
-        <button mat-flat-button color="primary" id="yes-button" [mat-dialog-close]="true" class="ml-2">Leave</button>
-    </div>
-  
-  </div>
+<div fxLayout="column" fxLayoutAlign="center center">
+   <p>
+      {{ data[0] }}
+   </p>
+   <p>
+      {{ data[1] }}
+   </p>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="5px">
+   <button mat-flat-button color="warn" id="no-button" [mat-dialog-close]="false">NO</button>
+   <button mat-flat-button color="primary" id="yes-button" [mat-dialog-close]="true" class="ml-2">Leave</button>
+</div>

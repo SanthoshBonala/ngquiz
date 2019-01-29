@@ -1,41 +1,12 @@
-.search-field {
-  width: 77%;
-}
-
 .link {
   text-decoration: underline;
   cursor: pointer;
 }
 ol {
   list-style-type: none;
-}
-
-#search {
-  margin-top: 1.25rem;
-}
-
-#search input,
-#search button {
-  display: inline-block;
-}
-
-#search input {
-  width: 77%;
-}
-
-#search button {
-  width: 13%;
-  margin: 0 !important;
-}
-
-#noSearchItems{
-  color: white;
+  margin: 10px;
 }
 
 .spacer{
    flex: 1 1 auto;
-}
-
-.card {
-  width: 100%;
 }

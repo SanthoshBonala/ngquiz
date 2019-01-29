@@ -20,9 +20,6 @@ $input-card-theme: mat-light-theme($input-primary, $input-accent, $input-warn);
 li, .custom-card {
   @include angular-material-theme($input-card-theme);
 }
-.search-field{
-  margin-left: 2rem;
-}
 
 $app-primary: mat-palette($mat-deep-purple);
 $app-accent:  mat-palette($mat-green);

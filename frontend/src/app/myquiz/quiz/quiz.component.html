@@ -1,27 +1,37 @@
-  <form id="msform" (ngSubmit)="getResults()" [formGroup]="quizForm">
-    <div class="col-sm-12">
-            <mat-horizontal-stepper>
-                <mat-step *ngFor="let question of questions; let i = index " formArrayName="answers">
-                    <ng-template matStepLabel> Question {{ i + 1 }}</ng-template>
+<form id="msform" (ngSubmit)="getResults()" [formGroup]="quizForm">
+    <mat-horizontal-stepper>
+        <mat-step *ngFor="let question of questions; let i = index " formArrayName="answers" >
+
+            <ng-template matStepLabel> Question {{ i + 1 }}</ng-template>
+            
+            <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
                     <h3>Question: {{ question.name }} </h3>
-                    <mat-form-field class="form-field">
-                            <textarea matInput type="text" placeholder="Type Your Answer Here" [formControlName]="i"></textarea>
+
+                    <mat-form-field style="width: 100%;">
+                        <textarea matInput type="text" placeholder="Type Your Answer Here"
+                         [formControlName]="i">
+                        </textarea>
                     </mat-form-field>
 
-                    <div *ngIf="i < questions.length - 1 ">
-                        <button type="button" mat-raised-button matStepperNext color="accent">Next</button>
-                    </div>
-                    
-                    <div *ngIf="i == questions.length -1">
-                        <button mat-raised-button type="submit" color="primary" class="ml-2">Submit</button>
-                    </div>
+                    <div style="display: flex; justify-content: space-between;">
 
-                    <div *ngIf="i > 0">
-                        <button type="button" mat-raised-button matStepperPrevious color="primary">Previous</button>
+                        <div style="flex: 1 1 auto;"
+                        *ngIf="(i < questions.length-1 || i == questions.length-1) && i < 1">
+                        </div>
+                        <button type="button" *ngIf="i > 0" mat-raised-button 
+                            matStepperPrevious color="primary">
+                            Previous</button>
+
+                        <button type="button" *ngIf="i < questions.length - 1"
+                            mat-raised-button matStepperNext color="primary">Next</button>
+
+                        <button type="submit" mat-raised-button 
+                        *ngIf="i == questions.length -1" color="primary">Submit</button>
                     </div>
+        
+            </div>
+            
+        </mat-step>
 
-                </mat-step>
-
-            </mat-horizontal-stepper>
-    </div>
+    </mat-horizontal-stepper>
 </form>
