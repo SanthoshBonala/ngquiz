@@ -15,6 +15,7 @@ import { ResultDialogComponent } from './_shared/result-dialog/result-dialog.com
 import { ConfirmDeleteComponent } from './_shared/confirm-delete/confirm-delete.component';
 import { CustomDialogComponent } from './_shared/custom-dialog/custom-dialog.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {AuthModule} from "./auth/auth.module";
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    AuthModule
   ],
   providers: [
     QuestionsService,
