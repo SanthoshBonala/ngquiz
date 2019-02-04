@@ -44,7 +44,6 @@ node('slave') {
   echo requestWithNumber $requestWithNumber
   echo requestWithString $requestWithString
   echo headerWithNumber $headerWithNumber
-  echo headerWithString $headerWithString
   '''
  }
    def mvnHome
