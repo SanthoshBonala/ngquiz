@@ -1,11 +1,10 @@
 node('slave') {
 
- stage("Getting Payload Parameters") {
-  sh '''
-  echo Variables from shell:
-  echo ref $ref
-  '''
- }
+   stage("Getting Payload Parameters") {
+    sh '''
+    echo ref $ref
+    '''
+   }
    def mvnHome
    
    stage('Preparation') { // for display purposes
