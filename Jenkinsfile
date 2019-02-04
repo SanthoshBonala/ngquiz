@@ -10,8 +10,24 @@ node('slave') {
         url: 'https://github.com/SanthoshBonala/ngquiz.git'   
       mvnHome = tool 'M3'
    }
-   stage('Build') {
-      // Run the maven build
-         sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
+   stage('Compile') {
+      // Run the maven compile
+         sh "'${mvnHome}/bin/mvn' clean compile"
+   }
+   
+   stage('Test') {
+      // Run the maven test
+         sh "'${mvnHome}/bin/mvn' test"
+   }
+   
+   stage('Package') {
+      // Run the maven package
+         sh "'${mvnHome}/bin/mvn' package"
+   }
+   
+   
+   stage('install') {
+      // Run the maven package
+         sh "'${mvnHome}/bin/mvn' install"
    }
 }
