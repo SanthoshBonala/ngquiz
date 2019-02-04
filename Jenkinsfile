@@ -3,7 +3,7 @@ node('slave') {
    stage('Preparation') { // for display purposes
       // Get some code from a GitHub repository
       git changelog: false,
-      credentialsId: 'santhoshbonala',
+      credentialsId: 'Github',
       poll: false,
       //url: 'https://github.com/SanthoshBonala/ngquiz'
       //git credentialsId: '50ddcfff-74b7-40a3-8a89-fa774e660477',
