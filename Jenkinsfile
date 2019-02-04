@@ -17,4 +17,9 @@ node('slave') {
       // Run the maven build
          sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
    }
+   
+    stage('echo') {
+      // Run the maven build
+       sh "echo 'success'"   
+    }
 }
