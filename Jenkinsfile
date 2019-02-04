@@ -11,7 +11,7 @@ node('slave') {
 
    stage('Compile') {
       // Run the maven compile
-         sh "'${mvnHome}/bin/mvn' clean compile"
+         sh "'${mvnHome}/bin/mvn' clean compile -P prod"
    }
    
    stage('Test') {
@@ -21,11 +21,11 @@ node('slave') {
    
    stage('Package') {
       // Run the maven package
-         sh "'${mvnHome}/bin/mvn' package"
+         sh "'${mvnHome}/bin/mvn' package -P prod"
    }
 
    stage('Install') {
       // Run the maven package
-         sh "'${mvnHome}/bin/mvn' install"
+         sh "'${mvnHome}/bin/mvn' install -P prod"
    }
 }
