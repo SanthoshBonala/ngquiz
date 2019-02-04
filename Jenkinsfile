@@ -5,6 +5,7 @@ node('slave') {
    stage('Preparation') {
       mvnHome = tool 'M3'
    }
+   
    stage('Compile') {
       // Run the maven compile
          sh "'${mvnHome}/bin/mvn' clean compile"
@@ -19,7 +20,7 @@ node('slave') {
       // Run the maven package
          sh "'${mvnHome}/bin/mvn' package"
    }
-   
+
    stage('Install') {
       // Run the maven package
          sh "'${mvnHome}/bin/mvn' install"
