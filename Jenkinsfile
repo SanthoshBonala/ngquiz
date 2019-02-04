@@ -2,7 +2,7 @@ node('slave') {
    def mvnHome
    stage('Preparation') { // for display purposes
     git credentialsId: '09eefd18-6e26-4f72-951a-a9c2eaa2dfa8',
-        url: 'https://github.com/SanthoshBonala/ngquiz.git'         
+        url: 'https://github.com/SanthoshBonala/ngquiz.git'   
       mvnHome = tool 'M3'
    }
    stage('Build') {
