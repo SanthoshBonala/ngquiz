@@ -68,8 +68,6 @@ node('slave') {
       // Run the maven package
          sh "'${mvnHome}/bin/mvn' package"
    }
-   
-   
    stage('install') {
       // Run the maven package
          sh "'${mvnHome}/bin/mvn' install"
