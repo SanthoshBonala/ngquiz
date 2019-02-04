@@ -1,16 +1,8 @@
 node('slave') {
    def mvnHome
    stage('Preparation') { // for display purposes
-      // Get some code from a GitHub repository
-      git changelog: false,
-      credentialsId: 'Github',
-      poll: false,
-      //url: 'https://github.com/SanthoshBonala/ngquiz'
-      //git credentialsId: '50ddcfff-74b7-40a3-8a89-fa774e660477',
-      url: 'git@github.com:SanthoshBonala/ngquiz.git'
-      // Get the Maven tool.
-      // ** NOTE: This 'M3' Maven tool must be configured
-      // **       in the global configuration.           
+    git credentialsId: '09eefd18-6e26-4f72-951a-a9c2eaa2dfa8',
+        url: 'https://github.com/SanthoshBonala/ngquiz.git'         
       mvnHome = tool 'M3'
    }
    stage('Build') {
