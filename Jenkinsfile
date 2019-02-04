@@ -26,7 +26,7 @@ node('slave') {
       // Run the maven package
          sh "'${mvnHome}/bin/mvn' package"
    }
-   stage('install') {
+   stage('Install') {
       // Run the maven package
          sh "'${mvnHome}/bin/mvn' install"
    }
