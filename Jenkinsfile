@@ -1,7 +1,7 @@
 node('slave') {
 
    def mvnHome
-   // testing lets hope this works  
+   // testing lets hope this  
    stage('Preparation') {
       // Maven
       git credentialsId: '09eefd18-6e26-4f72-951a-a9c2eaa2dfa8',
