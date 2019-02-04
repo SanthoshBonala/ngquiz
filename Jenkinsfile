@@ -9,9 +9,9 @@ node('slave') {
       mvnHome = tool 'M3'
    }
 
-   stage('stop service'){
-      sh "sudo service app stop"
-   }
+   // stage('stop service'){
+   //    sh "sudo service app stop"
+   // }
 
    stage('Compile') {
       // Run the maven compile
@@ -33,7 +33,7 @@ node('slave') {
          sh "'${mvnHome}/bin/mvn' install -P prod"
    }
 
-   stage('start service'){
-      sh "sudo service app start"
-   }
+   // stage('start service'){
+   //    sh "sudo service app start"
+   // }
 }
