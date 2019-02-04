@@ -2,7 +2,8 @@ node('slave') {
    def mvnHome
    stage('Getting Payload Parameters') {
       // Run the maven build
-      sh "echo ${params.payload}"   
+      sh "echo ${params.payload}"
+      sh "echo ${ref}"
    }
    
    stage('Preparation') { // for display purposes
