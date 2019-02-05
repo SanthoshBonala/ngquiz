@@ -19,18 +19,19 @@ node('slave') {
          sh "'${mvnHome}/bin/mvn' test"
    }
    
-   stage('Package') {
-      // Run the maven package
-         sh "'${mvnHome}/bin/mvn' package -P prod"
-   }
+   if ($payload == 'refs/heads/master') {
+      stage('Package') {
+         // Run the maven package
+            sh "'${mvnHome}/bin/mvn' package -P prod"
+      }
 
-   stage('Install') {
-      // Run the maven package
-         sh "'${mvnHome}/bin/mvn' install -P prod"
-   }
+      stage('Install') {
+         // Run the maven package
+            sh "'${mvnHome}/bin/mvn' install -P prod"
+      }
 
-   stage('restart service'){
-      // sh "sudo service app restart"
-      sh "echo $payload"
+      stage('restart service'){
+         sh "sudo service app restart"
+      }
    }
 }
