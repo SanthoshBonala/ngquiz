@@ -1,5 +1,5 @@
 node('slave') {
-
+   def payload = readJSON text:"$payload"
    def mvnHome
    // testing lets hope this  
    stage('Preparation') {
@@ -7,10 +7,6 @@ node('slave') {
       git credentialsId: '09eefd18-6e26-4f72-951a-a9c2eaa2dfa8',
       url: 'https://github.com/SanthoshBonala/ngquiz'
       mvnHome = tool 'M3'
-   }
-
-   stage('stop service'){
-      sh "sudo service app stop"
    }
 
    stage('Compile') {
@@ -33,7 +29,8 @@ node('slave') {
          sh "'${mvnHome}/bin/mvn' install -P prod"
    }
 
-   stage('start service'){
-      sh "sudo service app start"
+   stage('restart service'){
+      // sh "sudo service app restart"
+      sh "echo $payload"
    }
 }
