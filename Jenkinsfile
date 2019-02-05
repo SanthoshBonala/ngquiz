@@ -19,7 +19,7 @@ node('slave') {
          sh "'${mvnHome}/bin/mvn' test"
    }
    
-   if ($payload == 'refs/heads/master') {
+   if (payload.ref == 'refs/heads/master') {
       stage('Package') {
          // Run the maven package
             sh "'${mvnHome}/bin/mvn' package -P prod"
