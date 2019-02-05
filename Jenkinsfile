@@ -27,10 +27,11 @@ node('slave') {
 
       stage('Install') {
          // Run the maven package
-            sh "'${mvnHome}/bin/mvn' install -P prod"
+            sh "sudo '${mvnHome}/bin/mvn' install -P prod"
       }
 
       stage('restart service'){
+         sh "chmod 500 '/home/ubuntu/.m2/repository/com/primesoft/certprep/ngquiz/0.0.1-SNAPSHOT/ngquiz-0.0.1-SNAPSHOT.jar'"
          sh "sudo service app restart"
       }
    }
