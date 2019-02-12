@@ -3,6 +3,7 @@ import {AppComponent} from './app.component';
 import {LoginService} from "./_shared/login.service";
 import {OAuthService} from "angular-oauth2-oidc";
 import {RouterTestingModule} from "@angular/router/testing";
+import { MaterialModule } from './material.module';
 
 let noopFn: () => void = () => {
 };
@@ -19,7 +20,8 @@ describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        MaterialModule
       ],
       declarations: [
         AppComponent

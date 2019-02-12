@@ -13,7 +13,7 @@ import { DialogService } from 'src/app/_shared/dialog.service';
 
 export class AddQuestionComponent implements OnInit {
 
-  constructor(private router: Router, 
+  constructor(private router: Router,
               private route: ActivatedRoute,
               private fb: FormBuilder,
               private questionService: QuestionsService,
