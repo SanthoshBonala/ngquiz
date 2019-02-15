@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { AuthGuard } from "./_shared/auth.guard";
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: "myquiz",
     loadChildren: "./myquiz/quiz.module#QuizModule",

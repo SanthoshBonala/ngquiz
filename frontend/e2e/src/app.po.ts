@@ -2,10 +2,15 @@ import { browser, by, element } from 'protractor';
 
 export class AppPage {
   navigateTo() {
-    return browser.get('/');
+    return browser.get('/#/admin/questions');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  getElements() {
+    return element.all(by.tagName('li'));
   }
+
+  AddQuestionBtn() {
+    return element(by.xpath('/html/body/app-root/app-questions/div[2]/button[2]'));;
+  }
+
 }
